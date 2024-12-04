@@ -1,0 +1,14 @@
+bitsandbytes==0.42.0
+accelerate
+deepspeed
+scipy
+sentencepiece
+datasets
+evaluate
+pytest
+scikit-learn
+torch
+torchvision
+tensorboard
+sentence-transformers
+thefuzz
