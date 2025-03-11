@@ -16,7 +16,7 @@ pip install -r requirements.txt
 
 ### Prepare Environment for the RCP Stage
 
-For the RC stage, the requirements are:
+For the RCP stage, the requirements are:
 
 ```text
 PyTorch
