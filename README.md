@@ -89,3 +89,16 @@ bash eva-for-lora.sh
 Run `convert_llm_result_to_docred` to format the plain text output of the RC stage. 'idx.json' comes from `generate_for_step2.py`.
 
 You can evaluate the structured results with `evaluation.py`, which is modified from [link](https://github.com/thunlp/DocRED/blob/master/code/evaluation.py)
+
+## Citation
+
+If you find this work useful, please cite:
+
+```bibtex
+@article{li2024llm,
+  title={Llm with relation classifier for document-level relation extraction},
+  author={Li, Xingzuo and Chen, Kehai and Long, Yunfei and Zhang, Min},
+  journal={arXiv preprint arXiv:2408.13889},
+  year={2024}
+}
+```
