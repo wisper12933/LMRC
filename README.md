@@ -33,7 +33,7 @@ Please refer to [ATLOP](https://github.com/wzhouad/ATLOP) for further informatio
 
 ### Datasets
 
-The DocRED dataset can be downloaded following the instructions at [link](https://github.com/thunlp/DocRED/tree/master/data). The Re-DocRED dataset can be downloaded from [link](https://github.com/tonytan48/Re-DocRED) (You need to replace the original file in DocRED with the file with the suffix 'revised'). The expected structure of files is:
+The DocRED dataset can be downloaded following the instructions at [link](https://github.com/thunlp/DocRED/tree/master/data). The Re-DocRED dataset can be downloaded from [link](https://github.com/tonytan48/Re-DocRED) (You need to replace the original DocRED file with the 'revised' version in Re-DocRED). The expected structure of files is:
 
 ```text
 LMRC
@@ -50,6 +50,8 @@ LMRC
  |    |    |-- test_revised.json
  |    |    |-- rel_info.json
 ```
+
+*For your convenience, the two datasets are also available in the* `data/Relation Candidate Proposal` *directory.*
 
 ## Run Experiments
 
