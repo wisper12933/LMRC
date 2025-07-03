@@ -291,7 +291,7 @@ def generate_zero_shot_prompt(rel_path, path_in, path_out):
             fo.write('\n')
 
 
-def generate_for_step1_finetune(anno_path, split, path_out, test=False):
+def generate_for_step1_finetune(anno_path, split, path_out, index_path='', test=False):
     data = json.loads(open(anno_path).read())
 
     datas, idxs = [], []
@@ -363,7 +363,7 @@ def generate_for_step1_finetune(anno_path, split, path_out, test=False):
         jsoned = json.dumps(datas)
         fo.write(jsoned)
 
-    with open('../docred/idx/just_test_idx.json', 'w') as fid:
+    with open(index_path, 'w') as fid:
         jsoned = json.dumps(idxs)
         fid.write(jsoned)
 
@@ -517,7 +517,7 @@ def generate_for_re_finetune(anno_path, rel_path, index_path, split, path_out, t
                     # split to control token length
                     if len(e_pairs) == split:
                         idxs.append(idx)
-                        instruction = PROMPT_DICT['full_re_instruction_ft_revise'].format_map(
+                        instruction = PROMPT_DICT['full_re_instruction_ft'].format_map(
                             {'relation_set': relation_set})
                         inputs = PROMPT_DICT['input'].format_map(
                             {'text': doc_sents, 'e_num': split, 'e_pairs': '\n'.join(e_pairs)}
@@ -536,7 +536,7 @@ def generate_for_re_finetune(anno_path, rel_path, index_path, split, path_out, t
                         e_pairs, outputs = [], []
         # add the remaining triplets to the data
         idxs.append(idx)
-        instruction = PROMPT_DICT['full_re_instruction_ft_revise'].format_map({'relation_set': relation_set})
+        instruction = PROMPT_DICT['full_re_instruction_ft'].format_map({'relation_set': relation_set})
         inputs = PROMPT_DICT['input'].format_map(
             {'text': doc_sents, 'e_num': len(e_pairs), 'e_pairs': '\n'.join(e_pairs)}
         )

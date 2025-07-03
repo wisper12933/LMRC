@@ -55,7 +55,7 @@ LMRC
 
 ### Finetune your model for RC
 
-Run `convert_docred_to_llm.py` first to generate data for finetuning your model.
+Run `convert_docred_to_llm.py` first to generate data for finetuning your model (Alternatively, you can use the latest uploaded data in the `data` folder).
 
 Finetuning:
 
