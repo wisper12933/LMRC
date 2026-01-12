@@ -1,0 +1,8 @@
+### model
+model_name_or_path: path to/your/base/model
+adapter_name_or_path: path to/your/adapter
+trust_remote_code: true
+
+### dataset
+template: qwen # options: qwen, llama2, llama3. derived from LLaMA-Factory
+cutoff_len: 4096
