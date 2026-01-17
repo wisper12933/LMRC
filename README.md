@@ -32,6 +32,10 @@ cd RCP
 pip install -r requirements.txt
 ```
 
+⚠️ ***Note***: Since the required version of apex (apex==0.1) is relatively old, you may encounter compatibility or installation issues during setup. In such cases, you can refer to this [link][issue] for solutions.
+
+[issue]: https://github.com/NVIDIA/apex/issues/1870 "Apex installation issue"
+
 ### 2. Environment for RC
 
 The RC stage relies on **LLaMA-Factory**. Please enter the `RC` directory, clone the repository, and install the environment as follows:
